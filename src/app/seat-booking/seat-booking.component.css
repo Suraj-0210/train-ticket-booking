@@ -1,0 +1,24 @@
+/* src/app/seat-booking/seat-booking.component.css */
+.seat-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.seat {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.booked {
+  background-color: red;
+}
+
+.available {
+  background-color: green;
+}

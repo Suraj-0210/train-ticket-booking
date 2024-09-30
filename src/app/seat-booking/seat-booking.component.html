@@ -1,0 +1,19 @@
+<!-- src/app/seat-booking/seat-booking.component.html -->
+<div class="seat-container">
+  <div
+    *ngFor="let seat of displaySeats()"
+    [ngClass]="{ booked: seat.isBooked, available: !seat.isBooked }"
+    class="seat"
+  >
+    {{ seat.row }}-{{ seat.seatNumber }}
+  </div>
+</div>
+
+<div>
+  <input
+    type="number"
+    [(ngModel)]="seatsToBook"
+    placeholder="Enter number of seats to book"
+  />
+  <button (click)="bookSeats(seatsToBook)">Book Seats</button>
+</div>

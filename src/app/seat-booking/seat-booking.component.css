@@ -1,20 +1,25 @@
 /* src/app/seat-booking/seat-booking.component.css */
+
+/* Container for all the seats */
 .seat-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;                /* Use CSS Grid for layout */
+  grid-template-columns: repeat(7, 40px);  /* 7 columns of fixed width */
+  gap: 10px;                    /* Add spacing between seats */
+  justify-content: start;       /* Align seats to the start */
   margin-bottom: 20px;
 }
 
+/* Style for each seat */
 .seat {
-  width: 50px;
-  height: 50px;
-  margin: 5px;
+  width: 40px;
+  height: 40px;
   text-align: center;
-  line-height: 50px;
+  line-height: 40px;
   border: 1px solid black;
   border-radius: 4px;
 }
 
+/* Styles for booked and available seats */
 .booked {
   background-color: red;
 }
